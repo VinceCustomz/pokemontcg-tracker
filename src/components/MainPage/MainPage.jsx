@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { Component } from 'react'
+import UserLogOut from '../UserLogOut/UserLogOut'
 
-export default function MainPage() {
-  return (
-    <div>MainPage</div>
-  )
+export default class MainPage extends Component {
+  render() {
+    return (
+      <div>MainPage
+      <UserLogOut setUserInState={this.props.setUserInState}/>
+      </div>
+
+    )
+  }
 }
+

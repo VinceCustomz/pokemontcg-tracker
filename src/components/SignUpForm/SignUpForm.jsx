@@ -22,10 +22,11 @@ export default class SignUpForm extends Component {
       const fetchResponse = await fetch('/api/users/signup', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({name: this.state.name, email: this.state.email, password: this.state.password
+        body: JSON.stringify({name: this.state.name, email: this.state.email, password: this.state.password,
       })
     })
 
+    console.log('Pokemon tracker fetch response', fetchResponse)
     if (!fetchResponse.ok) throw new Error('Fetch Failed - Bad Request' + fetchResponse.status)
 
     let token = await fetchResponse.json()
@@ -37,7 +38,7 @@ export default class SignUpForm extends Component {
     this.props.setUserInState(userDoc)
 
     } catch (err) {
-      console.log("SignupForm error", err);
+      console.log("SignUpForm error", err);
       this.setState({ error: "Sign Up Failed - Try Again" });
     }
   };
