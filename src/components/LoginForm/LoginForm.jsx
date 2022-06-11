@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class LoginForm extends Component {
+export default class SignUpForm extends Component {
   state = {
     email: "",
     password: "",
@@ -17,7 +17,7 @@ export default class LoginForm extends Component {
   handleSubmit = async (evt) => {
     evt.preventDefault();
     try {
-      const fetchResponse = await fetch("/api/users/login", {
+      const fetchResponse = await fetch('/api/users/login', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
