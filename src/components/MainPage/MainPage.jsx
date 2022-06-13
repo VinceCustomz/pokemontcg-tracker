@@ -9,7 +9,7 @@ export default class MainPage extends Component {
         <br />
         <Link to= "*" className="">BOOSTER PACK SIMULATOR</Link>
         <br />
-        <Link to="/cards" className="">COLLECTION </Link>
+        <Link to="/cards" className="">CARDS LIST</Link>
       </div>
 
     )

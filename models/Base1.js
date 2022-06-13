@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const seedSchema = new mongoose.Schema({
+const base1Schema = new mongoose.Schema({
     id: String, // id
     name: String, // name
     hp: Number, // hp
@@ -17,4 +17,4 @@ const seedSchema = new mongoose.Schema({
     timestamps: false
 });
 
-module.exports = mongoose.model('Seed', seedSchema);
+module.exports = mongoose.model('Base1', base1Schema);
