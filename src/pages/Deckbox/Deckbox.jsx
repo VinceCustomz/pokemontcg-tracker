@@ -80,6 +80,44 @@ class Deckbox extends React.Component {
                             : <p>No Cards!</p>}
                     </tbody>
             </table>
+
+            
+            <div class="w-screen h-screen flex justify-center items-center">
+                    
+                    <div class="container mx-auto max-w-xs rounded-lg overflow-hidden shadow-lg my-2 bg-white">
+                        <div class="py-10 px-6 text-center tracking-wide grid grid-cols-1 gap-6">
+                        {this.state.cards.length ? 
+                            this.state.cards.map(card => (
+                                <tr>
+                                <div class="relative mb-6  w-full " >
+                                    <img className="w-full h-full " src={card.image_large} ></img>
+                            
+                                </div>
+                                    
+                                    
+                                    <button id={card._id} className="delete-button" type="submit" onClick={this.handleDelete}>X</button>
+                                    - {card.quantity} -
+                                    {card.name} -
+                                    {card.rarity} 
+                                </tr>
+                            ))
+                            : <p>No Cards!</p>}
+                            
+                            {/* <div class="posts">
+                                <p class="text-lg">324</p>
+                                <p class="text-gray-400 text-sm">Posts</p>
+                            </div>
+                            <div class="followers">
+                                <p class="text-lg">7542</p>
+                                <p class="text-gray-400 text-sm">Followers</p>
+                            </div>
+                            <div class="following">
+                                <p class="text-lg">295</p>
+                                <p class="text-gray-400 text-sm">Following</p>
+                            </div> */}
+                        </div>
+                    </div>
+                    </div>
         </div>
         )
     }
