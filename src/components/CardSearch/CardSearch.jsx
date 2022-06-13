@@ -74,32 +74,35 @@ class CardSearch extends React.Component {
 
     render() {
         return (
-            <div>
-                <div className="center-div">
+            <div className='bg-slate-800 '>
+                <div className="center-div ">
                     <form action="/home" method="GET">
-                        <h1 className="text-center">Pokemon TCG Searcher</h1>
+                        <h1 className="text-center text-white pt-8 text-2xl font-bold">Pokemon TCG Searcher</h1>
                         <div className="search-group">
-                            <label className="search-label" htmlFor="name">Card ID</label>
+                            {/* <label className="search-label text-white" htmlFor="name">Card ID</label> */}
+                            <br></br>
                             <input type="text" 
                                 name="cardID" 
-                                className="block" 
+                                className="w-1/4 p-4 text-lg rounded-sm bg-gray-100 mt-8 mb-8 text-black " 
                                 placeholder="Enter a Card ID" 
                                 value={this.state.cardID} 
                                 onChange={this.handleChange}
                             />
                         </div>
                         <div className="search-group-button">
-                            <button className="button block" type="submit" onClick={this.handleSubmit}>Search</button>
+                            <button className="button  uppercase  mt-8 mb-8 w-1/4 p-4 text-lg rounded-full bg-rose-400 hover:bg-indigo-600 focus:outline-none" type="submit" onClick={this.handleSubmit}>Search</button>
                         </div>
                         <div className="add-button">
-                            <button className="button block" type="submit" onClick={this.handleAdd}>Add Card</button>
+                            <button className="button uppercase   w-1/4 p-4 text-lg rounded-full bg-rose-400 hover:bg-indigo-600 focus:outline-none" type="submit" onClick={this.handleAdd}>Add Card</button>
                         </div>
                     </form>
                 </div>
                 <div className="search-results">
                     {this.displayCard()}
+
                 </div>
-            </div>
+                    
+                            </div>
         )
     }
 };
