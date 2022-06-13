@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
-import UserLogOut from '../UserLogOut/UserLogOut'
+import { Link } from 'react-router-dom'
 
 export default class MainPage extends Component {
    
   render() {
     return (
-      <div>MainPage
-      <UserLogOut setUserInState={this.props.setUserInState}/>
+      <div>MAIN PAGE 
+        <br />
+        <Link to= "*" className="">BOOSTER PACK SIMULATOR</Link>
+        <br />
+        <Link to="/cards" className="">COLLECTION </Link>
       </div>
 
     )

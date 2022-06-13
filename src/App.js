@@ -46,7 +46,7 @@ class App extends Component {
             </Routes>
             : 
             <Routes>
-              <Route path='/home' element={<MainPage />}/>
+              <Route path='/home' element={<AuthPage setUserInState={this.setUserInState} />}/>
               <Route path='/authenticate' element={<AuthPage setUserInState={this.setUserInState} />}/>
               <Route path='*' element={<Navigate to='/home' replace />} />
             </Routes>             
