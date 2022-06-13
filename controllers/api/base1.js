@@ -1,6 +1,5 @@
 const Base1 = require('../../models/Base1')
 require('dotenv').config()
-
 const mongoose = require("mongoose");
 
 mongoose.connect(process.env.DATABASE_URL, {
