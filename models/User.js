@@ -15,7 +15,8 @@ const userSchema = new Schema({
         trim: true,
         minLength: 3,
         required: true,
-    }
+    },
+    cards: [{type: Schema.Types.ObjectId, ref: 'Card'}],
 }, {
     timestamps: true,
     toJSON: {
