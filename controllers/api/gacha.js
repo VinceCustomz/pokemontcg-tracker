@@ -1,15 +1,15 @@
-const Base1 = require('../../models/Base1');
+const Base1 = require('../../models/Base1')
 
 module.exports = {
-    gacha,
+    index,
 }
 
-async function gacha(req, res) {
+async function index(req, res) {
     try {
         // Common, Uncommon, Rare, Rare Holo
         const pack = ['','','','','','','','','',''];
         let thisPack = [];
-        const setCards = Base1.find({});
+        const setCards = await Base1.find({});
         const numCardsInSet = setCards.length;
         pack.forEach(function(card, idx) {
             if (idx <= 5) { // 6 Commons

@@ -1,9 +1,73 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default class PackGacha extends Component {
+  state = {
+    card1:
+      "https://i5.walmartimages.com/asr/0a32d419-d745-45c0-b367-927f43a0b9fb.bd571c5c075cece9f4893f1cf10926c4.jpeg?odnHeight=450&odnWidth=450&odnBg=ffffff",
+    card2:
+      "https://i5.walmartimages.com/asr/0a32d419-d745-45c0-b367-927f43a0b9fb.bd571c5c075cece9f4893f1cf10926c4.jpeg?odnHeight=450&odnWidth=450&odnBg=ffffff",
+    card3:
+      "https://i5.walmartimages.com/asr/0a32d419-d745-45c0-b367-927f43a0b9fb.bd571c5c075cece9f4893f1cf10926c4.jpeg?odnHeight=450&odnWidth=450&odnBg=ffffff",
+    card4:
+      "https://i5.walmartimages.com/asr/0a32d419-d745-45c0-b367-927f43a0b9fb.bd571c5c075cece9f4893f1cf10926c4.jpeg?odnHeight=450&odnWidth=450&odnBg=ffffff",
+    card5:
+      "https://i5.walmartimages.com/asr/0a32d419-d745-45c0-b367-927f43a0b9fb.bd571c5c075cece9f4893f1cf10926c4.jpeg?odnHeight=450&odnWidth=450&odnBg=ffffff",
+    card6:
+      "https://i5.walmartimages.com/asr/0a32d419-d745-45c0-b367-927f43a0b9fb.bd571c5c075cece9f4893f1cf10926c4.jpeg?odnHeight=450&odnWidth=450&odnBg=ffffff",
+    card7:
+      "https://i5.walmartimages.com/asr/0a32d419-d745-45c0-b367-927f43a0b9fb.bd571c5c075cece9f4893f1cf10926c4.jpeg?odnHeight=450&odnWidth=450&odnBg=ffffff",
+    card8:
+      "https://i5.walmartimages.com/asr/0a32d419-d745-45c0-b367-927f43a0b9fb.bd571c5c075cece9f4893f1cf10926c4.jpeg?odnHeight=450&odnWidth=450&odnBg=ffffff",
+    card9:
+      "https://i5.walmartimages.com/asr/0a32d419-d745-45c0-b367-927f43a0b9fb.bd571c5c075cece9f4893f1cf10926c4.jpeg?odnHeight=450&odnWidth=450&odnBg=ffffff",
+    card10:
+      "https://i5.walmartimages.com/asr/0a32d419-d745-45c0-b367-927f43a0b9fb.bd571c5c075cece9f4893f1cf10926c4.jpeg?odnHeight=450&odnWidth=450&odnBg=ffffff",
+  };
+
+  handleGacha = async (e) => {
+    e.preventDefault();
+    this.setState({ card1: "" });
+    try {
+      let card1 = this.state.card1;
+      const jwt = localStorage.getItem("token");
+      //GET request, it will go to server.js > go through app.use('/api/cards') > routes > gacha > router.get('/', gachaCtrl.index) and trigger the INDEX controller in controllers/api/gacha
+      const cardDataFull = await fetch("/api/gacha", {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + jwt,
+        },
+      }).then((res) => res.json());
+
+      this.setState({ card1: card1.image_small });
+    } catch (err) {
+      console.error("Error: ", err);
+    }
+  };
+
   render() {
     return (
-      <div>PackGacha</div>
-    )
+      <div>
+        <h1>PackGacha</h1>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 m-2 px-4 rounded" onClick={this.handleGacha}>
+          Flip Cards
+        </button>
+        <button className="bg-blue-500 hover:bg-orange-700 text-white font-bold py-2 m-2 px-4 rounded">
+          Retry
+        </button>
+
+        <div class="grid grid-cols-5 grid-rows-2 gap-y-5 m-3">
+          <img src={this.state.card1}></img>
+          <img src={this.state.card2}></img>
+          <img src={this.state.card3}></img>
+          <img src={this.state.card4}></img>
+          <img src={this.state.card5}></img>
+          <img src={this.state.card6}></img>
+          <img src={this.state.card7}></img>
+          <img src={this.state.card8}></img>
+          <img src={this.state.card9}></img>
+          <img src={this.state.card10}></img>
+        </div>
+      </div>
+    );
   }
 }

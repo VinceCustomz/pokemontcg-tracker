@@ -37,7 +37,7 @@ export default class MainPage extends Component {
               <img src="https://cdn.shopify.com/s/files/1/0255/2168/4558/products/15868_Alcove_FlipBox_PKM_Arceus_500x.png?v=1644867950" alt="Deckbox" title="Deckbox" class="mx-auto h-64 hover:rotate-12 scale-125" />
             </div>
             <div class="text-center">
-              <h3 class="text-center text-4xl font-bold m-12">Cards List</h3>
+              <h3 class="text-center text-4xl font-bold m-12">Card Collection</h3>
               
             </div>
             
