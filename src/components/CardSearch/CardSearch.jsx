@@ -56,6 +56,7 @@ class CardSearch extends React.Component {
             let card = this.state.card.data;
             return (
                 <p> 
+                    {/* <span>  <img className="w-1/3 h-1/3" src={card.image_large} ></img></span>  */}
                     <span><strong>Name: </strong>{card.name}</span><br/>
                     <span><strong>HP: </strong>{card.hp}, <strong>Set ID: </strong>{card.set.id}, <strong>Rarity: </strong>{card.rarity}</span><br/>
                     <span><strong>Set Name: </strong>{card.set.name}, <strong>Set Series:  </strong>{card.set.series}</span><br/>
@@ -67,7 +68,7 @@ class CardSearch extends React.Component {
             )
         } else {
             return (
-                <p>Please search for a card.</p>
+                <p>Please search for a card</p>
             )
         }
     }
@@ -97,7 +98,7 @@ class CardSearch extends React.Component {
                         </div>
                     </form>
                 </div>
-                <div className="search-results">
+                <div className="search-results rounded-full bg-rose-400 ml-64 mr-64 mt-4 text-2xl">
                     {this.displayCard()}
 
                 </div>

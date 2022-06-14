@@ -56,7 +56,7 @@ class Deckbox extends React.Component {
         return(
             <div className='center-div'>
                 <CardSearch getCards={this.getCards}/>
-                <table>
+                {/* <table>
                     <tbody>
                         <tr className="table-headers table-bottom-border">
                             <th className="table-header-right">Delete</th>
@@ -79,45 +79,40 @@ class Deckbox extends React.Component {
                             ))
                             : <p>No Cards!</p>}
                     </tbody>
-            </table>
+            </table> */}
 
             
-            <div class="w-screen h-screen flex justify-center items-center">
+            <div class="w-full h-full flex  justify-center items-center bg-slate-800">
                     
-                    <div class="container mx-auto max-w-xs rounded-lg overflow-hidden shadow-lg my-2 bg-white">
-                        <div class="py-10 px-6 text-center tracking-wide grid grid-cols-1 gap-6">
+                    <div class="container mx-4  rounded-lg overflow-hidden shadow-lg my-2 bg-slate-700 text-white ">
+                        <div class="py-10 px-6 text-center tracking-wide grid grid-cols-4 gap-6 w-full m-0">
                         {this.state.cards.length ? 
                             this.state.cards.map(card => (
-                                <tr>
+                                <div className="max-w-1/4">
                                 <div class="relative mb-6  w-full " >
                                     <img className="w-full h-full " src={card.image_large} ></img>
                             
                                 </div>
                                     
-                                    
-                                    <button id={card._id} className="delete-button" type="submit" onClick={this.handleDelete}>X</button>
-                                    - {card.quantity} -
+                                    <div>
+
+                                    {card.quantity} -
                                     {card.name} -
-                                    {card.rarity} 
-                                </tr>
+                                    {card.rarity} -
+                                    <button id={card._id} className="delete-button" type="submit" onClick={this.handleDelete}>🗑️</button>
+                                    </div>
+                                </div>
                             ))
                             : <p>No Cards!</p>}
                             
-                            {/* <div class="posts">
-                                <p class="text-lg">324</p>
-                                <p class="text-gray-400 text-sm">Posts</p>
-                            </div>
-                            <div class="followers">
-                                <p class="text-lg">7542</p>
-                                <p class="text-gray-400 text-sm">Followers</p>
-                            </div>
-                            <div class="following">
-                                <p class="text-lg">295</p>
-                                <p class="text-gray-400 text-sm">Following</p>
-                            </div> */}
+                            
                         </div>
                     </div>
                     </div>
+
+
+
+                    
         </div>
         )
     }

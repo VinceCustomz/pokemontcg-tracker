@@ -58,19 +58,19 @@ class NavBar extends React.Component {
                 >
                     <a
                     href="#"
-                    class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-slate-800 font-bold items-center justify-center hover:bg-gray-900 hover:text-white"
+                    class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-gray-900 hover:text-white"
                     >
                     <Link to="/home" className="">Main Page  </Link>
                     </a>
                     <a
                     href="#"
-                    class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-slate-800 font-bold items-center justify-center hover:bg-gray-900 hover:text-white"
+                    class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-gray-900 hover:text-white"
                     >
                     <Link to="/cards" className="">Cards List </Link>
                     </a>
                     <a
                     href="#"
-                    class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-slate-800 font-bold items-center justify-center hover:bg-gray-900 hover:text-white"
+                    class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-gray-900 hover:text-white"
                     >
                     { this.props.user ?
                         <a href="/logout" className="" onClick={this.handleLogout}>Logout  </a>
