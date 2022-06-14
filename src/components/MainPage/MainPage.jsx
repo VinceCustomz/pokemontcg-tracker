@@ -25,7 +25,8 @@ export default class MainPage extends Component {
             </div>
             
             <div class="text-center">
-              <button class="rounded-xl bg-slate-800 px-24 py-2 text-white hover:bg-gray-900 hover:drop-shadow-2xl"><Link to= "*" className="">SELECT</Link> </button>
+              <button class="rounded-xl bg-slate-800 px-24 py-2 text-white hover:bg-gray-900 hover:drop-shadow-2xl">
+                <Link to= "/gacha" className="">SELECT</Link> </button>
             </div>
           </div>
 

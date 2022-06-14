@@ -1,4 +1,4 @@
-const Seed = require('../../models/Seeding');
+const Base1 = require('../../models/Base1');
 
 module.exports = {
     gacha,
@@ -9,7 +9,7 @@ async function gacha(req, res) {
         // Common, Uncommon, Rare, Rare Holo
         const pack = ['','','','','','','','','',''];
         let thisPack = [];
-        const setCards = Seed.find({});
+        const setCards = Base1.find({});
         const numCardsInSet = setCards.length;
         pack.forEach(function(card, idx) {
             if (idx <= 5) { // 6 Commons
