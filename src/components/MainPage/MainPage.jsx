@@ -25,7 +25,8 @@ export default class MainPage extends Component {
             </div>
             
             <div class="text-center">
-              <button class="rounded-xl bg-slate-800 px-24 py-2 text-white hover:bg-gray-900 hover:drop-shadow-2xl"><Link to= "*" className="">SELECT</Link> </button>
+              <button class="rounded-xl bg-slate-800 px-24 py-2 text-white hover:bg-gray-900 hover:drop-shadow-2xl">
+                <Link to= "/gacha" className="">SELECT</Link> </button>
             </div>
           </div>
 
@@ -36,7 +37,7 @@ export default class MainPage extends Component {
               <img src="https://cdn.shopify.com/s/files/1/0255/2168/4558/products/15868_Alcove_FlipBox_PKM_Arceus_500x.png?v=1644867950" alt="Deckbox" title="Deckbox" class="mx-auto h-64 transition duration-300 hover:rotate-12 scale-125" />
             </div>
             <div class="text-center">
-              <h3 class="text-center text-4xl font-bold m-12">Cards List</h3>
+              <h3 class="text-center text-4xl font-bold m-12">Card Collection</h3>
               
             </div>
             

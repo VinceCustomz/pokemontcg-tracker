@@ -1,15 +1,15 @@
-const Seed = require('../../models/Seeding');
+const Base1 = require('../../models/Base1')
 
 module.exports = {
-    gacha,
+    index,
 }
 
-async function gacha(req, res) {
+async function index(req, res) {
     try {
         // Common, Uncommon, Rare, Rare Holo
         const pack = ['','','','','','','','','',''];
         let thisPack = [];
-        const setCards = Seed.find({});
+        const setCards = await Base1.find({});
         const numCardsInSet = setCards.length;
         pack.forEach(function(card, idx) {
             if (idx <= 5) { // 6 Commons
@@ -23,6 +23,8 @@ async function gacha(req, res) {
                 thisPack.push(rarePlusCard);
             }
         })
+        console.log("Do you reach here????")
+        console.log(thisPack)
         res.status(200).json(thisPack);
     } catch (err) {
         console.log(error);
@@ -30,7 +32,7 @@ async function gacha(req, res) {
     }
 }
 
-async function getCommon(setCards, numCardsInSet) {
+function getCommon(setCards, numCardsInSet) {
     let cardCache = null;
     while (cardCache === null) {
         let rng = Math.floor(Math.random() * numCardsInSet)
@@ -43,7 +45,7 @@ async function getCommon(setCards, numCardsInSet) {
     return cardCache;
 }
 
-async function getUncommon(setCards, numCardsInSet) {
+function getUncommon(setCards, numCardsInSet) {
     let cardCache = null;
     while (cardCache === null) {
         let rng = Math.floor(Math.random() * numCardsInSet)
@@ -56,7 +58,7 @@ async function getUncommon(setCards, numCardsInSet) {
     return cardCache;
 }
 
-async function getRarePlus(setCards, numCardsInSet) {
+function getRarePlus(setCards, numCardsInSet) {
     let cardCache = null;
     while (cardCache === null) {
         let rng = Math.floor(Math.random() * numCardsInSet)

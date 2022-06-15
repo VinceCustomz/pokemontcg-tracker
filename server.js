@@ -28,6 +28,7 @@ app.use(function (req, res, next) {
 
 // Unprotected routes here
 app.use('/api/users', require('./routes/api/users'));
+app.use('/api/gacha', require('./routes/api/gacha'));
 
 // Protected routes below
 app.use(require('./config/auth'));
