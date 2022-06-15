@@ -84,11 +84,11 @@ class Deckbox extends React.Component {
             
             <div class="w-full h-full flex  justify-center items-center bg-slate-800">
                     
-                    <div class="container mx-4  rounded-lg overflow-hidden shadow-lg my-2 bg-slate-700 text-white ">
+                    <div class="container mx-4  rounded-lg overflow-hidden shadow-lg my-2 bg-slate-800 text-white ">
                         <div class="py-10 px-6 text-center tracking-wide grid grid-cols-4 gap-6 w-full m-0">
                         {this.state.cards.length ? 
                             this.state.cards.map(card => (
-                                <div className="max-w-1/4">
+                                <div className="max-w-1/4 bg-slate-700 p-8 rounded-lg transition duration-300 ease-in-out hover:scale-105">
                                 <div class="relative mb-6  w-full " >
                                     <img className="w-full h-full " src={card.image_large} ></img>
                             
@@ -96,8 +96,8 @@ class Deckbox extends React.Component {
                                     
                                     <div>
 
-                                    {card.quantity} -
-                                    {card.name} -
+                                    {card.name} 
+                                    ({card.quantity}) -
                                     {card.rarity} -
                                     <button id={card._id} className="delete-button" type="submit" onClick={this.handleDelete}>🗑️</button>
                                     </div>
