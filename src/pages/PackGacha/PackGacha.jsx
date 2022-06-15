@@ -67,7 +67,7 @@ export default class PackGacha extends Component {
           FLIP CARDS
         </button>
 
-        <div class="grid grid-cols-5 grid-rows-2 gap-y-5 m-3">
+        <div class="grid grid-cols-5 grid-rows-2 gap-y-5 m-3 content-center">
           <img src={this.state.card0}></img>
           <img src={this.state.card1}></img>
           <img src={this.state.card2}></img>
@@ -83,3 +83,4 @@ export default class PackGacha extends Component {
     );
   }
 }
+ 
