@@ -91,10 +91,10 @@ class CardSearch extends React.Component {
                             />
                         </div>
                         <div className="search-group-button">
-                            <button className="button  uppercase  mt-8 mb-8 w-1/4 p-4 text-lg rounded-full bg-rose-400 hover:bg-indigo-600 focus:outline-none" type="submit" onClick={this.handleSubmit}>Search</button>
+                            <button className="button  uppercase  mt-8 mb-8 w-1/4 p-4 text-lg rounded-full bg-rose-400 hover:bg-rose-600 focus:outline-none" type="submit" onClick={this.handleSubmit}>Search</button>
                         </div>
                         <div className="add-button">
-                            <button className="button uppercase   w-1/4 p-4 text-lg rounded-full bg-rose-400 hover:bg-indigo-600 focus:outline-none" type="submit" onClick={this.handleAdd}>Add Card</button>
+                            <button className="button uppercase   w-1/4 p-4 text-lg rounded-full bg-rose-400 hover:bg-rose-600 focus:outline-none" type="submit" onClick={this.handleAdd}>Add Card</button>
                         </div>
                     </form>
                 </div>

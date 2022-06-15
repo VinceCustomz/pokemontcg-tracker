@@ -10,7 +10,7 @@ class AuthPage extends React.Component {
     render() {
         return (
             <div className="AuthPage">
-                <div onClick={() => this.setState({ showLogin: !this.state.showLogin })} className="hover:underline ">
+                <div onClick={() => this.setState({ showLogin: !this.state.showLogin })} className="hover:underline text-3xl p-4 text-white bg-slate-800">
                     { this.state.showLogin ? "Sign Up" : "Log In" }
                 </div>
                 { this.state.showLogin ? (<LoginForm setUserInState={this.props.setUserInState}/>) 
