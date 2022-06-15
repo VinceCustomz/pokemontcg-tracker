@@ -60,7 +60,7 @@ import React from "react";
             <div class="w-full py-6 z-20">
             
                 <h1 class="my-6 text-5xl font-bold tracking-wide">
-                  <div className="w-10 h-10 items-center justify-center inline-flex rounded-full font-bold text-lg  bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/1026px-Pok%C3%A9_Ball_icon.svg.png')] bg-center bg-cover"></div>
+                  <div className="w-10 h-10 items-center justify-center inline-flex rounded-full font-bold text-lg  bg-[url('https://i.imgur.com/HFZXYgi.png')] bg-center bg-cover"></div>
                     
                     PokePacks
                 </h1>
@@ -118,7 +118,7 @@ import React from "react";
                     <button 
                     type='submit' 
                     disabled={disable}
-                    className="uppercase block mt-12 mb-12 w-full p-4 text-lg rounded-full bg-rose-400 hover:bg-indigo-600 focus:outline-none"
+                    className="uppercase block mt-12 mb-12 w-full p-4 text-lg rounded-full bg-rose-400 hover:bg-rose-600 focus:outline-none"
                     >
                         Sign Up
                     </button>

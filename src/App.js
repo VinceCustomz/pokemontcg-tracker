@@ -38,7 +38,7 @@ class App extends Component {
     return (
       <main>
         <NavBar setUserInState={this.setUserInState} user={this.state.user} />
-        <div className="App">
+        <div className="App ">
           {this.state.user ? (
             <Routes>
               <Route path="/home" element={<MainPage />} />
