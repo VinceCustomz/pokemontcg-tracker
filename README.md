@@ -14,6 +14,8 @@ In the Booster Pack Simulation you will be simulating a 10 card pack opening wit
 
 In the Card Collection Section you can search for the cards in your collection and add them into our digital database 
 
+Click here to Begin:  https://pokemontcgtracker3.herokuapp.com/home
+
 
 ### Screenshots
 
