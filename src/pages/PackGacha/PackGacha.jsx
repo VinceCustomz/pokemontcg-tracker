@@ -31,7 +31,6 @@ export default class PackGacha extends Component {
     e.preventDefault();
     // this.setState({ card1: "" });
     try {
-      let tempCard1 = this.state.card1;
       const jwt = localStorage.getItem("token");
       //GET request, it will go to server.js > go through app.use('/api/cards') > routes > gacha > router.get('/', gachaCtrl.index) and trigger the INDEX controller in controllers/api/gacha
       
@@ -62,6 +61,21 @@ export default class PackGacha extends Component {
     }
   };
 
+  handleRetry = async (e) => {
+    e.preventDefault();
+    this.setState ({
+      card0: "https://i.imgur.com/9amq6m6.png",
+      card1: "https://i.imgur.com/9amq6m6.png",
+      card2: "https://i.imgur.com/9amq6m6.png",
+      card3: "https://i.imgur.com/9amq6m6.png",
+      card4: "https://i.imgur.com/9amq6m6.png",
+      card5: "https://i.imgur.com/9amq6m6.png",
+      card6: "https://i.imgur.com/9amq6m6.png",
+      card7: "https://i.imgur.com/9amq6m6.png",
+      card8: "https://i.imgur.com/9amq6m6.png",
+      card9: "https://i.imgur.com/9amq6m6.png"
+    })
+  }
   
 
   render() {
@@ -70,6 +84,9 @@ export default class PackGacha extends Component {
         {/* <h1>PackGacha</h1> */}
         <button className="bg-rose-400 hover:bg-rose-600 text-white font-bold py-2 m-4 px-4 rounded" onClick={this.handleGacha}>
           FLIP CARDS
+        </button>
+        <button className="bg-rose-400 hover:bg-rose-600 text-white font-bold py-2 m-4 px-4 rounded" onClick={this.handleRetry}>
+          RETRY
         </button>
 
         <div className="grid grid-cols-5 grid-rows-2   bg-slate-800  ">

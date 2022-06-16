@@ -23,8 +23,6 @@ async function index(req, res) {
                 thisPack.push(rarePlusCard);
             }
         })
-        console.log("Do you reach here????")
-        console.log(thisPack)
         res.status(200).json(thisPack);
     } catch (err) {
         console.log(error);
