@@ -1,5 +1,5 @@
 const Card = require('../../models/Card');
-const User = require('../../models/user');
+const User = require('../../models/User');
 
 module.exports = {
     index,
