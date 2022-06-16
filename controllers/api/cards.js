@@ -1,4 +1,4 @@
-const Card = require('../../models/card');
+const Card = require('../../models/Card');
 const User = require('../../models/user');
 
 module.exports = {
