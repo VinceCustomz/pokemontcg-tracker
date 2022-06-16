@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import "./PackGacha.css"
+
 
 
 export default class PackGacha extends Component {
