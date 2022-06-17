@@ -1,6 +1,6 @@
 import React from "react";
 
- class SignupForm extends React.Component {
+class SignupForm extends React.Component {
     state = {
         name: '',
         email: '',
@@ -27,7 +27,6 @@ import React from "react";
             const userDoc = JSON.parse(atob(token.split('.')[1])).user;
             this.props.setUserInState(userDoc)
         } catch (error) {
-            console.log('Signup Form Error', error)
             this.setState({ error: 'Signup Failed - Try Again' })
         }
     }
