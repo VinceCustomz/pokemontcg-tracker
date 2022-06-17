@@ -1,5 +1,4 @@
 import React from 'react';
-import './UserLogOut.css'
 
 class UserLogOut extends React.Component {
   handleLogout = () => {
@@ -8,11 +7,11 @@ class UserLogOut extends React.Component {
   }
 
   render() {
-  return (
-      <div className='UserLogOut'>
-        <button className="btn-sm" onClick={this.handleLogout}>Logout</button>
-      </div>
-  );
+    return (
+        <div className='UserLogOut'>
+          <button className="btn-sm" onClick={this.handleLogout}>Logout</button>
+        </div>
+    );
   }
 }
 

@@ -80,7 +80,6 @@ class CardSearch extends React.Component {
                     <form action="/home" method="GET">
                         <h1 className="text-center text-white pt-8 text-2xl font-bold">Pokemon TCG Searcher</h1>
                         <div className="search-group">
-                            {/* <label className="search-label text-white" htmlFor="name">Card ID</label> */}
                             <br></br>
                             <input type="text" 
                                 name="cardID" 
@@ -100,10 +99,8 @@ class CardSearch extends React.Component {
                 </div>
                 <div className="search-results rounded-full bg-rose-400 ml-64 mr-64 mt-4 text-2xl">
                     {this.displayCard()}
-
-                </div>
-                    
-                            </div>
+                </div>                    
+            </div>
         )
     }
 };
