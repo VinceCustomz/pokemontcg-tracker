@@ -12,16 +12,14 @@ async function index(req, res) {
         const cards = await User.findById(req.user._id).populate('cards').sort({ name: 'asc' }).exec();
         res.status(200).json(cards.cards);
     } catch (error) {
-        console.log(error);
+        console.error(error);
         res.status(400).json(error);
     }
 }
 
 async function create(req, res) {
     try {
-        console.log("got to the create func");
         const cardCache = req.body.card.data;
-        console.log(cardCache);
         let query = { set_id: cardCache.set.id , name: cardCache.name };
         Card.findOne(query, function(err, found) {
             if (found === null) {
@@ -39,7 +37,6 @@ async function create(req, res) {
                     });
                 });
             } else { // The card is found
-                console.log("userid: " + req.user._id);
                 User.findById(req.user._id).populate('cards').exec(function(err, user){ // Find the user and populate
                     let needNew = true;
                     user.cards.forEach(function(err, idx){
@@ -48,7 +45,7 @@ async function create(req, res) {
                             card.quantity++;
                             card.save();
                             needNew = false;
-                            console.log("Dupe counted");
+                            console.log("Duplicate counted");
                         };
                     });
                     if (needNew) {
@@ -62,7 +59,7 @@ async function create(req, res) {
                             User.findById(req.user._id).exec(function(err, user){
                                 user.cards.push(card);
                                 user.save();
-                                console.log("New to user card created");
+                                console.log("New card item created");
                             });
                         });
                     };
