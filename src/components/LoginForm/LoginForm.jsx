@@ -42,6 +42,7 @@ class LoginForm extends React.Component {
                         </div>
                         <div class="bottom-0 absolute p-4 text-center right-0 left-0 flex justify-center space-x-4"></div>
                     </div>
+
                     <div class="lg:w-1/2 w-full flex items-center justify-center text-center md:px-16 px-0 z-0 bg-slate-900" >
                         <div class="absolute lg:hidden z-10 inset-0 bg-gray-500 bg-no-repeat bg-cover items-center" >
                             <div class="absolute bg-black opacity-60 inset-0 z-0"></div>
@@ -83,6 +84,7 @@ class LoginForm extends React.Component {
                         </form>
                         <p className='error-message'>&nbsp;{this.state.error}</p>
                     </div>
+                    
                 </div>
             </section>
         </div>
