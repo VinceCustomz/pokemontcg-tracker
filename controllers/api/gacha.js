@@ -11,7 +11,7 @@ async function index(req, res) {
         let thisPack = [];
         const setCards = await Base1.find({});
         const numCardsInSet = setCards.length;
-        pack.forEach(function(card, idx) {
+        pack.forEach(function(idx) {
             if (idx <= 5) { // 6 Commons
                 const commonCard = getCommon(setCards, numCardsInSet);
                 thisPack.push(commonCard);
